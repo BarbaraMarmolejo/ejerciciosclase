@@ -1,5 +1,9 @@
 /* Este programa dibuja una "Tetera", este objeto esta definido
- * en GLUT, se crea una fuente de luz, y un material */
+  en GLUT, se crea una fuente de luz, y un material 
+   Bonilla Galicia Yardiel 
+   Practica 1
+   VS 2017
+   cambie la instruccion glutCreateWindow */
 
 //Incluimos las librerias
 //#include <GL/glut.h>
@@ -114,7 +118,7 @@ int main(int argc, char **argv)
 
 	 // Creamos literalmente la ventana y le adjudicamos el nombre que se
 	 // observara en su barra de titulo.
-	 glutCreateWindow ("Pr·cticaBGY");
+	 glutCreateWindow ("Pr√°cticaBGY");
 
 	 // Inicializamos el sistema 
 	 init();
