@@ -1,4 +1,4 @@
-//Semestre 2017 - 2
+//
 //Bonilla Galicia Yardiel//
 //practica  #2 
 //visual studio 2017 
@@ -7,7 +7,7 @@
 void InitGL ( GLvoid )     // Inicializamos parametros
 {
 	//glShadeModel(GL_FLAT);							// Habilitamos Smooth Shading
-	glClearColor(45.0f, 0.0f, 0.0f, 0.0f);				// Negro de fondo
+	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);				// Negro de fondo
 	//glClearDepth(1.0f);									// Configuramos Depth Buffer
 	//glEnable(GL_DEPTH_TEST);							// Habilitamos Depth Testing
 	//glDepthFunc(GL_LEQUAL);								// Tipo de Depth Testing a realizar
@@ -22,15 +22,174 @@ void display ( void )   // Creamos la funcion donde se dibuja
 	glLoadIdentity();									// Reinicializamos la actual matriz Modelview
 
 	//Poner aqui codigo ha dibujar
-	glBegin(GL_QUADS);
-	glVertex3f(-5.0f, 5.0f, 0.0f);
-	glVertex3f(-5.0f, 1.0f, 0.0f);
-	glVertex3f(-4.0f, 1.0f, 0.0f);
-	glVertex3f(-4.0f, 1.5f, 0.0f);
-	glVertex3f(-4.0f, 1.5f, 0.0f);
-	glVertex3f(-4.5f, 1.5f, 0.0f);
-	
+	glBegin(GL_TRIANGLES);					
+
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glVertex3f(-5.0f, 1.0f, -0.2f);
+	glVertex3f(-5.0f, 3.0f, -0.2f);
+	glColor3f(255.0f, 255.0f, 255.0f);
+	glVertex3f(-11.0f, 1.0f, -0.2f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+
+	glVertex3f(-5.0f, 3.0f, -0.2f);
+	glColor3f(255.0f, 255.0f, 255.0f);
+	glVertex3f(-11.0f, 1.0f, -0.2f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glVertex3f(-9.0f, 3.0f, -0.2f);
+	glColor3f(255.0f, 255.0f, 255.0f);
+	glVertex3f(-11.0f, 1.0f, -0.2f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glVertex3f(-9.0f, 3.0f, -0.2f);
+	glVertex3f(-9.0f, 7.0f, -0.2f);
+	glColor3f(255.0f, 255.0f, 255.0f);
+	glVertex3f(-11.0f, 1.0f, -0.2f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glVertex3f(-9.0f, 7.0f, -0.2f);
+	glVertex3f(-11.0f, 9.0f, -0.2f);
+
+
+	glVertex3f(-9.0f, 7.0f, -0.2f);
+	glVertex3f(-5.0f, 7.0f, -0.2f);
+	glVertex3f(-5.0f, 9.0f, -0.2f);
+
+	glVertex3f(-5.0f, 9.0f, -0.2f);
+	glVertex3f(-11.0f, 9.0f, -0.2f);
+	glVertex3f(-9.0f, 7.0f, -0.2f);
+
 	glEnd();
+
+
+	// g 
+
+	glBegin(GL_TRIANGLES);
+
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glColor3f(255.0f, 255.0f, 255.0f);
+	glVertex3f(0.0f, 1.0f, -0.2f);
+	glVertex3f(0.0f, 3.0f, -0.2f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+
+	glVertex3f(-4.0f, 1.0f, -0.2f);
+	glVertex3f(0.0f, 3.0f, -0.2f);
+	glVertex3f(-4.0f, 1.0f, -0.2f);
+	glVertex3f(-2.0f, 3.0f, -0.2f);
+
+	glVertex3f(-4.0f, 1.0f, -0.2f);
+	glVertex3f(-2.0f, 3.0f, -0.2f);
+	glVertex3f(-2.0f, 7.0f, -0.2f);
+
+	glVertex3f(-4.0f, 1.0f, -0.2f);
+	glVertex3f(-2.0f, 7.0f, -0.2f);
+	glVertex3f(-4.0f, 9.0f, -0.2f);
+
+	glVertex3f(-2.0f, 7.0f, -0.2f);
+	glVertex3f(2.0f, 7.0f, -0.2f);
+	glVertex3f(2.0f, 9.0f, -0.2f);
+
+	glVertex3f(2.0f, 9.0f, -0.2f);
+	glVertex3f(-4.0f, 9.0f, -0.2f);
+	glVertex3f(-2.0f, 7.0f, -0.2f);
+	glColor3f(1.0f, 1.0f, 1.0f);
+
+
+	glEnd();
+
+	glBegin(GL_POLYGON);
+
+	glColor3f(1.0f, 0.0f, 0.0f);
+
+
+	glVertex3f(0.0f, 5.0f, -0.2f);
+	glVertex3f(2.0f, 5.0f, -0.2f);
+	glColor3f(255.0f, 255.0f, 255.0f);
+	glVertex3f(2.0f, 0.0f, -0.2f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glVertex3f(0.0f, 0.0f, -0.2f);
+
+	glVertex3f(0.0f, 5.0f, -0.2f);
+	glColor3f(255.0f, 255.0f, 255.0f);
+	glVertex3f(0.0f, 4.0f, -0.2f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glVertex3f(-1.0f, 4.0f, -0.2f);
+	glVertex3f(-1.0f, 5.0f, -0.2f);
+	glEnd();
+
+	// Y 
+	glBegin(GL_POLYGON);
+	glVertex3f(6.0f, 5.0f, -0.2f);
+	glVertex3f(6.0f, 0.0f, -0.2f);
+	glVertex3f(4.0f, 0.0f, -0.2f);
+	glVertex3f(4.0f, 5.0f, -0.2f);
+	glColor3f(255.0f, 255.0f, 255.0f);
+	glVertex3f(6.0f, 9.0f, -0.2f);
+	glVertex3f(8.0f, 9.0f, -0.2f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+
+	glVertex3f(6.0f, 5.0f, -0.2f);
+	glVertex3f(4.0f, 5.0f, -0.2f);
+
+
+	glVertex3f(6.0f, 5.0f, -0.2f);
+	glVertex3f(4.0f, 5.0f, -0.2f);
+	glColor3f(255.0f, 255.0f, 255.0f);
+	glVertex3f(2.0f, 9.0f, -0.2f);
+	glVertex3f(4.0f, 9.0f, -0.2f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glEnd();
+	//B
+	glBegin(GL_POLYGON);
+
+
+	glVertex3f(11.0f, 9.0f, -0.2f);
+	glColor3f(255.0f, 255.0f, 255.0f);
+	glVertex3f(11.0f, 0.0f, -0.2f);
+	glVertex3f(9.0f, 0.0f, -0.2f);
+	glVertex3f(9.0f, 9.0f, -0.2f);
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(14.0f, 1.0f, -0.2f);
+	glVertex3f(14.0f, 0.0f, -0.2f);
+	glVertex3f(10.0f, 0.0f, -0.2f);
+	glVertex3f(10.0f, 1.0f, -0.2f);
+	glEnd();
+	glBegin(GL_POLYGON);
+	glVertex3f(14.0f, 3.0f, -0.2f);
+	glVertex3f(14.0f, 1.0f, -0.2f);
+	glVertex3f(13.0f, 1.0f, -0.2f);
+	glVertex3f(13.0f, 3.0f, -0.2f);
+
+	glEnd();
+	glBegin(GL_POLYGON);
+	glVertex3f(14.0f, 8.0f, -0.2f);
+	glVertex3f(14.0f, 6.0f, -0.2f);
+	glVertex3f(13.0f, 6.0f, -0.2f);
+	glVertex3f(13.0f, 8.0f, -0.2f);
+
+	glEnd();
+	glBegin(GL_POLYGON);
+	glVertex3f(14.0f, 4.5f, -0.2f);
+	glVertex3f(14.0f, 3.0f, -0.2f);
+	glVertex3f(10.0f, 3.0f, -0.2f);
+	glVertex3f(10.0f, 4.5f, -0.2f);
+
+	glEnd();
+	glBegin(GL_POLYGON);
+	glVertex3f(14.0f, 6.0f, -0.2f);
+	glVertex3f(14.0f, 4.8f, -0.2f);
+	glVertex3f(10.0f, 4.8f, -0.2f);
+	glVertex3f(10.0f, 6.0f, -0.2f);
+
+	glEnd();
+	glBegin(GL_POLYGON);
+	glVertex3f(14.0f, 9.0f, -0.2f);
+	glVertex3f(14.0f, 8.0f, -0.2f);
+	glVertex3f(10.0f, 8.0f, -0.2f);
+	glVertex3f(10.0f, 9.0f, -0.2f);
+
+	glEnd();
+
 
 	glFlush();
 }
@@ -48,7 +207,7 @@ void reshape ( int width , int height )   // Creamos funcion Reshape
 	glLoadIdentity();
 
 	// Ortogonal
-	glOrtho(-10,10,-10,10,-1,2);
+	glOrtho(-20, 20, -20, 20, 0.1, 2);
 
 	glMatrixMode(GL_MODELVIEW);							// Seleccionamos Modelview Matrix
 	glLoadIdentity();									
