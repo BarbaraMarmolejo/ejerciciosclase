@@ -1,8 +1,8 @@
 //Semestre 2017 - 2
 //Bonilla Galicia Yardiel//
 //Grupo1//
-////
-//*************											******//
+//visual2017//
+//generar las letras en colores CGY y agregar las funciones de arriba, abajo//
 //*************											******//
 //************************************************************//
 
@@ -19,7 +19,7 @@ float transY = 0.0f;
 float transZ = -5.0f;
 
 
-void InitGL ( GLvoid )     // Inicializamos parametros
+void InitGL(GLvoid)     // Inicializamos parametros
 {
 
 	//glShadeModel(GL_SMOOTH);							// Habilitamos Smooth Shading
@@ -34,79 +34,79 @@ void InitGL ( GLvoid )     // Inicializamos parametros
 
 void prisma(void)
 {
-	GLfloat vertice [8][3] = {
-				{0.5 ,-3.5, 0.5},    //Coordenadas Vértice 0 V0
-				{-0.5 ,-3.5, 0.5},    //Coordenadas Vértice 1 V1
-				{-0.5 ,-3.5, -0.5},    //Coordenadas Vértice 2 V2
-				{0.5 ,-3.5, -0.5},    //Coordenadas Vértice 3 V3
-				{0.5 ,3.5, 0.5},    //Coordenadas Vértice 4 V4
-				{0.5 ,3.5, -0.5},    //Coordenadas Vértice 5 V5
-				{-0.5 ,3.5, -0.5},    //Coordenadas Vértice 6 V6
-				{-0.5 ,3.5, 0.5},    //Coordenadas Vértice 7 V7
-				};
+	GLfloat vertice[8][3] = {
+				{0.5 ,-3.5, 0.5},    //Coordenadas VÃ©rtice 0 V0
+				{-0.5 ,-3.5, 0.5},    //Coordenadas VÃ©rtice 1 V1
+				{-0.5 ,-3.5, -0.5},    //Coordenadas VÃ©rtice 2 V2
+				{0.5 ,-3.5, -0.5},    //Coordenadas VÃ©rtice 3 V3
+				{0.5 ,3.5, 0.5},    //Coordenadas VÃ©rtice 4 V4
+				{0.5 ,3.5, -0.5},    //Coordenadas VÃ©rtice 5 V5
+				{-0.5 ,3.5, -0.5},    //Coordenadas VÃ©rtice 6 V6
+				{-0.5 ,3.5, 0.5},    //Coordenadas VÃ©rtice 7 V7
+	};
 
 
-		glBegin(GL_POLYGON);	//Front
-		glColor3f(1.0, 0.0, 0.0);
-			glVertex3fv(vertice[0]);
-			glVertex3fv(vertice[4]);
-			glVertex3fv(vertice[7]);
-			glVertex3fv(vertice[1]);
-		glEnd();
+	glBegin(GL_POLYGON);	//Front
+	glColor3f(1.0, 0.0, 0.0);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[4]);
+	glVertex3fv(vertice[7]);
+	glVertex3fv(vertice[1]);
+	glEnd();
 
-		glBegin(GL_POLYGON);	//Right
-		glColor3f(1.0, 0.0, 0.0);
-			glVertex3fv(vertice[0]);
-			glVertex3fv(vertice[3]);
-			glVertex3fv(vertice[5]);
-			glVertex3fv(vertice[4]);
-		glEnd();
+	glBegin(GL_POLYGON);	//Right
+	glColor3f(1.0, 0.0, 0.0);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[3]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[4]);
+	glEnd();
 
-		glBegin(GL_POLYGON);	//Back
-		glColor3f(1.0, 0.0, 0.0);
-			glVertex3fv(vertice[6]);
-			glVertex3fv(vertice[5]);
-			glVertex3fv(vertice[3]);
-			glVertex3fv(vertice[2]);
-		glEnd();
+	glBegin(GL_POLYGON);	//Back
+	glColor3f(1.0, 0.0, 0.0);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[3]);
+	glVertex3fv(vertice[2]);
+	glEnd();
 
-		glBegin(GL_POLYGON);  //Left
-		glColor3f(1.0, 0.0, 0.0);
-			glVertex3fv(vertice[1]);
-			glVertex3fv(vertice[7]);
-			glVertex3fv(vertice[6]);
-			glVertex3fv(vertice[2]);
-		glEnd();
+	glBegin(GL_POLYGON);  //Left
+	glColor3f(1.0, 0.0, 0.0);
+	glVertex3fv(vertice[1]);
+	glVertex3fv(vertice[7]);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[2]);
+	glEnd();
 
-		glBegin(GL_POLYGON);  //Bottom
-	
-		glColor3f(1.0, 0.0, 0.0);
-			glVertex3fv(vertice[0]);
-			glVertex3fv(vertice[1]);
-			glVertex3fv(vertice[2]);
-			glVertex3fv(vertice[3]);
-		glEnd();
+	glBegin(GL_POLYGON);  //Bottom
 
-		glBegin(GL_POLYGON);  //Top
-		glColor3f(1.0, 0.0, 0.0);
-			glVertex3fv(vertice[4]);
-			glVertex3fv(vertice[5]);
-			glVertex3fv(vertice[6]);
-			glVertex3fv(vertice[7]);
-		glEnd();
+	glColor3f(1.0, 0.0, 0.0);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[1]);
+	glVertex3fv(vertice[2]);
+	glVertex3fv(vertice[3]);
+	glEnd();
+
+	glBegin(GL_POLYGON);  //Top
+	glColor3f(1.0, 0.0, 0.0);
+	glVertex3fv(vertice[4]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[7]);
+	glEnd();
 }
 
 void letrac(void)
 {
 	GLfloat vertice[8][3] = {
-			{3.5 ,-0.5, 0.5},    //Coordenadas Vértice 0 V0
-			{-3.5 ,-0.5, 0.5},    //Coordenadas Vértice 1 V1
-			{-3.5 ,-0.5, -0.5},    //Coordenadas Vértice 2 V2
-			{3.5 ,-0.5, -0.5},    //Coordenadas Vértice 3 V3
-			{3.5 ,0.5, 0.5},    //Coordenadas Vértice 4 V4
-			{3.5 ,0.5, -0.5},    //Coordenadas Vértice 5 V5
-			{-3.5 ,0.5, -0.5},    //Coordenadas Vértice 6 V6
-			{-3.5 ,0.5, 0.5},    //Coordenadas Vértice 7 V7
+			{3.5 ,-0.5, 0.5},    //Coordenadas VÃ©rtice 0 V0
+			{-3.5 ,-0.5, 0.5},    //Coordenadas VÃ©rtice 1 V1
+			{-3.5 ,-0.5, -0.5},    //Coordenadas VÃ©rtice 2 V2
+			{3.5 ,-0.5, -0.5},    //Coordenadas VÃ©rtice 3 V3
+			{3.5 ,0.5, 0.5},    //Coordenadas VÃ©rtice 4 V4
+			{3.5 ,0.5, -0.5},    //Coordenadas VÃ©rtice 5 V5
+			{-3.5 ,0.5, -0.5},    //Coordenadas VÃ©rtice 6 V6
+			{-3.5 ,0.5, 0.5},    //Coordenadas VÃ©rtice 7 V7
 	};
 
 	glBegin(GL_POLYGON);	//Front
@@ -165,19 +165,19 @@ void letrac(void)
 void letrag1(void)
 {
 	GLfloat vertice[8][3] = {
-				{0.5 ,-3.5, 0.5},    //Coordenadas Vértice 0 V0
-				{-0.5 ,-3.5, 0.5},    //Coordenadas Vértice 1 V1
-				{-0.5 ,-3.5, -0.5},    //Coordenadas Vértice 2 V2
-				{0.5 ,-3.5, -0.5},    //Coordenadas Vértice 3 V3
-				{0.5 ,3.5, 0.5},    //Coordenadas Vértice 4 V4
-				{0.5 ,3.5, -0.5},    //Coordenadas Vértice 5 V5
-				{-0.5 ,3.5, -0.5},    //Coordenadas Vértice 6 V6
-				{-0.5 ,3.5, 0.5},    //Coordenadas Vértice 7 V7
+				{0.5 ,-3.5, 0.5},    //Coordenadas VÃ©rtice 0 V0
+				{-0.5 ,-3.5, 0.5},    //Coordenadas VÃ©rtice 1 V1
+				{-0.5 ,-3.5, -0.5},    //Coordenadas VÃ©rtice 2 V2
+				{0.5 ,-3.5, -0.5},    //Coordenadas VÃ©rtice 3 V3
+				{0.5 ,3.5, 0.5},    //Coordenadas VÃ©rtice 4 V4
+				{0.5 ,3.5, -0.5},    //Coordenadas VÃ©rtice 5 V5
+				{-0.5 ,3.5, -0.5},    //Coordenadas VÃ©rtice 6 V6
+				{-0.5 ,3.5, 0.5},    //Coordenadas VÃ©rtice 7 V7
 	};
 
 
 	glBegin(GL_POLYGON);	//Front
-	glColor3f(0.0, 0.1, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[0]);
 	glVertex3fv(vertice[4]);
 	glVertex3fv(vertice[7]);
@@ -185,7 +185,7 @@ void letrag1(void)
 	glEnd();
 
 	glBegin(GL_POLYGON);	//Right
-	glColor3f(0.0, 0.1, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[0]);
 	glVertex3fv(vertice[3]);
 	glVertex3fv(vertice[5]);
@@ -193,7 +193,7 @@ void letrag1(void)
 	glEnd();
 
 	glBegin(GL_POLYGON);	//Back
-	glColor3f(1.0, 0.0, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[6]);
 	glVertex3fv(vertice[5]);
 	glVertex3fv(vertice[3]);
@@ -201,7 +201,7 @@ void letrag1(void)
 	glEnd();
 
 	glBegin(GL_POLYGON);  //Left
-	glColor3f(0.0, 0.1, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[1]);
 	glVertex3fv(vertice[7]);
 	glVertex3fv(vertice[6]);
@@ -210,7 +210,7 @@ void letrag1(void)
 
 	glBegin(GL_POLYGON);  //Bottom
 
-	glColor3f(0.0, 0.1, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[0]);
 	glVertex3fv(vertice[1]);
 	glVertex3fv(vertice[2]);
@@ -218,7 +218,7 @@ void letrag1(void)
 	glEnd();
 
 	glBegin(GL_POLYGON);  //Top
-	glColor3f(0.0, 0.1, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[4]);
 	glVertex3fv(vertice[5]);
 	glVertex3fv(vertice[6]);
@@ -229,18 +229,18 @@ void letrag1(void)
 void letrag2(void)
 {
 	GLfloat vertice[8][3] = {
-			{3.0 ,-0.5, 0.5},    //Coordenadas Vértice 0 V0
-			{-3.0,-0.5, 0.5},    //Coordenadas Vértice 1 V1
-			{-3.0 ,-0.5, -0.5},    //Coordenadas Vértice 2 V2
-			{3.0,-0.5, -0.5},    //Coordenadas Vértice 3 V3
-			{3.0 ,0.5, 0.5},    //Coordenadas Vértice 4 V4
-			{3.0 ,0.5, -0.5},    //Coordenadas Vértice 5 V5
-			{-3.0 ,0.5, -0.5},    //Coordenadas Vértice 6 V6
-			{-3.0 ,0.5, 0.5},    //Coordenadas Vértice 7 V7
+			{3.0 ,-0.5, 0.5},    //Coordenadas VÃ©rtice 0 V0
+			{-3.0,-0.5, 0.5},    //Coordenadas VÃ©rtice 1 V1
+			{-3.0 ,-0.5, -0.5},    //Coordenadas VÃ©rtice 2 V2
+			{3.0,-0.5, -0.5},    //Coordenadas VÃ©rtice 3 V3
+			{3.0 ,0.5, 0.5},    //Coordenadas VÃ©rtice 4 V4
+			{3.0 ,0.5, -0.5},    //Coordenadas VÃ©rtice 5 V5
+			{-3.0 ,0.5, -0.5},    //Coordenadas VÃ©rtice 6 V6
+			{-3.0 ,0.5, 0.5},    //Coordenadas VÃ©rtice 7 V7
 	};
 
 	glBegin(GL_POLYGON);	//Front
-	glColor3f(0.0, 0.1, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[0]);
 	glVertex3fv(vertice[4]);
 	glVertex3fv(vertice[7]);
@@ -248,7 +248,7 @@ void letrag2(void)
 	glEnd();
 
 	glBegin(GL_POLYGON);	//Right
-	glColor3f(0.0, 0.1, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[0]);
 	glVertex3fv(vertice[3]);
 	glVertex3fv(vertice[5]);
@@ -256,7 +256,7 @@ void letrag2(void)
 	glEnd();
 
 	glBegin(GL_POLYGON);	//Back
-	glColor3f(0.0, 0.1, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[6]);
 	glVertex3fv(vertice[5]);
 	glVertex3fv(vertice[3]);
@@ -264,7 +264,7 @@ void letrag2(void)
 	glEnd();
 
 	glBegin(GL_POLYGON);  //Left
-	glColor3f(0.0, 0.1, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[1]);
 	glVertex3fv(vertice[7]);
 	glVertex3fv(vertice[6]);
@@ -273,7 +273,7 @@ void letrag2(void)
 
 	glBegin(GL_POLYGON);  //Bottom
 
-	glColor3f(0.0, 0.1, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[0]);
 	glVertex3fv(vertice[1]);
 	glVertex3fv(vertice[2]);
@@ -281,7 +281,69 @@ void letrag2(void)
 	glEnd();
 
 	glBegin(GL_POLYGON);  //Top
-	glColor3f(0.0, 0.1, 0.0);
+	glColor3f(0.0f, 0.0f, 1.0f);
+	glVertex3fv(vertice[4]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[7]);
+	glEnd();
+}
+void letrag3(void)
+{
+	GLfloat vertice[8][3] = {
+			{0.5 ,-0.5, 0.5},    //Coordenadas VÃ©rtice 0 V0
+			{-0.5,-0.5, 0.5},    //Coordenadas VÃ©rtice 1 V1
+			{-0.5 ,-0.5, -0.5},    //Coordenadas VÃ©rtice 2 V2
+			{0.5,-0.5, -0.5},    //Coordenadas VÃ©rtice 3 V3
+			{0.5 ,0.5, 0.5},    //Coordenadas VÃ©rtice 4 V4
+			{0.5 ,0.5, -0.5},    //Coordenadas VÃ©rtice 5 V5
+			{-0.5 ,0.5, -0.5},    //Coordenadas VÃ©rtice 6 V6
+			{-0.5 ,0.5, 0.5},    //Coordenadas VÃ©rtice 7 V7
+	};
+
+	glBegin(GL_POLYGON);	//Front
+	glColor3f(0.0f, 0.0f, 1.0f);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[4]);
+	glVertex3fv(vertice[7]);
+	glVertex3fv(vertice[1]);
+	glEnd();
+
+	glBegin(GL_POLYGON);	//Right
+	glColor3f(0.0f, 0.0f, 1.0f);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[3]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[4]);
+	glEnd();
+
+	glBegin(GL_POLYGON);	//Back
+	glColor3f(0.0f, 0.0f, 1.0f);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[3]);
+	glVertex3fv(vertice[2]);
+	glEnd();
+
+	glBegin(GL_POLYGON);  //Left
+	glColor3f(0.0f, 0.0f, 1.0f);
+	glVertex3fv(vertice[1]);
+	glVertex3fv(vertice[7]);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[2]);
+	glEnd();
+
+	glBegin(GL_POLYGON);  //Bottom
+
+	glColor3f(0.0f, 0.0f, 1.0f);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[1]);
+	glVertex3fv(vertice[2]);
+	glVertex3fv(vertice[3]);
+	glEnd();
+
+	glBegin(GL_POLYGON);  //Top
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3fv(vertice[4]);
 	glVertex3fv(vertice[5]);
 	glVertex3fv(vertice[6]);
@@ -289,16 +351,139 @@ void letrag2(void)
 	glEnd();
 }
 
+void letray(void)
+{
+	GLfloat vertice[8][3] = {
+			{0.5 ,-2.5, 0.5},    //Coordenadas VÃ©rtice 0 V0
+			{-0.5,-2.5, 0.5},    //Coordenadas VÃ©rtice 1 V1
+			{-0.5 ,-2.5, -0.5},    //Coordenadas VÃ©rtice 2 V2
+			{0.5,-2.5, -0.5},    //Coordenadas VÃ©rtice 3 V3
+			{0.5 ,2.5, 0.5},    //Coordenadas VÃ©rtice 4 V4
+			{0.5 ,2.5, -0.5},    //Coordenadas VÃ©rtice 5 V5
+			{-0.5 ,2.5, -0.5},    //Coordenadas VÃ©rtice 6 V6
+			{-0.5 ,2.5, 0.5},    //Coordenadas VÃ©rtice 7 V7
+	};
 
+	glBegin(GL_POLYGON);	//Front
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[4]);
+	glVertex3fv(vertice[7]);
+	glVertex3fv(vertice[1]);
+	glEnd();
 
-void display ( void )   // Creamos la funcion donde se dibuja
+	glBegin(GL_POLYGON);	//Right
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[3]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[4]);
+	glEnd();
+
+	glBegin(GL_POLYGON);	//Back
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[3]);
+	glVertex3fv(vertice[2]);
+	glEnd();
+
+	glBegin(GL_POLYGON);  //Left
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[1]);
+	glVertex3fv(vertice[7]);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[2]);
+	glEnd();
+
+	glBegin(GL_POLYGON);  //Bottom
+
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[1]);
+	glVertex3fv(vertice[2]);
+	glVertex3fv(vertice[3]);
+	glEnd();
+
+	glBegin(GL_POLYGON);  //Top
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[4]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[7]);
+	glEnd();
+}
+
+void letray2(void)
+{
+	GLfloat vertice[8][3] = {
+			{0.5 ,-0.5, 0.5},    //Coordenadas VÃ©rtice 0 V0
+			{-0.5,-0.5, 0.5},    //Coordenadas VÃ©rtice 1 V1
+			{-0.5 ,-0.5, -0.5},    //Coordenadas VÃ©rtice 2 V2
+			{0.5,-0.5, -0.5},    //Coordenadas VÃ©rtice 3 V3
+			{0.5 ,0.5, 0.5},    //Coordenadas VÃ©rtice 4 V4
+			{0.5 ,0.5, -0.5},    //Coordenadas VÃ©rtice 5 V5
+			{-0.5 ,0.5, -0.5},    //Coordenadas VÃ©rtice 6 V6
+			{-0.5 ,0.5, 0.5},    //Coordenadas VÃ©rtice 7 V7
+	};
+
+	glBegin(GL_POLYGON);	//Front
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[4]);
+	glVertex3fv(vertice[7]);
+	glVertex3fv(vertice[1]);
+	glEnd();
+
+	glBegin(GL_POLYGON);	//Right
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[3]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[4]);
+	glEnd();
+
+	glBegin(GL_POLYGON);	//Back
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[3]);
+	glVertex3fv(vertice[2]);
+	glEnd();
+
+	glBegin(GL_POLYGON);  //Left
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[1]);
+	glVertex3fv(vertice[7]);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[2]);
+	glEnd();
+
+	glBegin(GL_POLYGON);  //Bottom
+
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[0]);
+	glVertex3fv(vertice[1]);
+	glVertex3fv(vertice[2]);
+	glVertex3fv(vertice[3]);
+	glEnd();
+
+	glBegin(GL_POLYGON);  //Top
+	glColor3f(0.0f, 1.0f, 0.0f);
+	glVertex3fv(vertice[4]);
+	glVertex3fv(vertice[5]);
+	glVertex3fv(vertice[6]);
+	glVertex3fv(vertice[7]);
+	glEnd();
+}
+void display(void)   // Creamos la funcion donde se dibuja
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Limiamos pantalla y Depth Buffer
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-		//Poner Código Aquí.
-	glTranslatef(transX,transY,transZ);
+	//Poner CÃ³digo AquÃ­.
+	glTranslatef(transX, transY, transZ);
 
 
 	letrac();
@@ -307,117 +492,142 @@ void display ( void )   // Creamos la funcion donde se dibuja
 	glTranslatef(3.0f, 3.0f, 0.0f);
 	letrac();
 
-	
+
 	glTranslatef(5.0f, -3.0f, 0.0f);
 	letrag1();
-	glTranslatef(2.0f, 3.0f, 0.0f);
+	glTranslatef(3.0f, 3.0f, 0.0f);
 	letrag2();
+	glTranslatef(0.0f, -6.0f, 0.0f);
+	letrag2();
+
+	glTranslatef(2.5f, 1.0f, 0.0f);
+	letrag3();
+	glTranslatef(0.0f, 1.0f, 0.0f);
+	letrag3();
+	glTranslatef(0.0f, 1.0f, 0.0f);
+	letrag3();
+	glTranslatef(-1.0f, 0.0f, 0.0f);
+	letrag3();
+	glTranslatef(-1.0f, 0.0f, 0.0f);
+	letrag3();
+
+	glTranslatef(6.0f, -1.0f, 0.0f);
+	letray();
+
+	glTranslatef(1.0f, 3.0f, 0.0f);
+	letray2();
+	glTranslatef(1.0f, 1.0f, 0.0f);
+	letray2();
+	glTranslatef(1.0f, 1.0f, 0.0f);
+	letray2();
+	glTranslatef(-4.0f, -2.0f, 0.0f);
+	letray2();
+	glTranslatef(-1.0f, 1.0f, 0.0f);
+	letray2();
+	glTranslatef(-1.0f, 1.0f, 0.0f);
+	letray2();
 	
-
-
-    glutSwapBuffers ( );
-    //glFlush();
-    // Swap The Buffers
+	glutSwapBuffers();
+	//glFlush();
+	// Swap The Buffers
 }
 
-void reshape ( int width , int height )   // Creamos funcion Reshape
+void reshape(int width, int height)   // Creamos funcion Reshape
 {
-  if (height==0)										// Prevenir division entre cero
+	if (height == 0)										// Prevenir division entre cero
 	{
-		height=1;
+		height = 1;
 	}
 
-	glViewport(0,0,width,height);	
+	glViewport(0, 0, width, height);
 
 	glMatrixMode(GL_PROJECTION);						// Seleccionamos Projection Matrix
 	glLoadIdentity();
 
 	// Tipo de Vista
 	//glOrtho(-5,5,-5,5,0.1,20);	
-	glFrustum (-0.1, 0.1,-0.1, 0.1, 0.1, 50.0);
+	glFrustum(-0.1, 0.1, -0.1, 0.1, 0.1, 50.0);
 }
 
-void keyboard ( unsigned char key, int x, int y )  // Create Keyboard Function
+void keyboard(unsigned char key, int x, int y)  // Create Keyboard Function
 {
-	switch ( key ) {
-		case 'w':
-		case 'W':
-			transZ +=0.2f;
-			printf("Posicion en Z: %f\n", transZ);
-			break;
-		case 's':
-		case 'S':
-			transZ -=0.2f;
-			printf("Posicion en Z: %f\n", transZ);
-			break;
-		case 'a':
-		case 'A':
-			transX -=0.2f;
-			break;
-		case 'd':
-		case 'D':
-			transX +=0.2f;
-			break;
-		case 'q':
-		case 'Q':
-			transY += 0.2f;
-			break;
-		case 'e':
-		case 'E':
-			transY -= 0.2f;
-			break;
-		case 27:        // Cuando Esc es presionado...
-			exit ( 0 );   // Salimos del programa
-		break;        
-		default:        // Cualquier otra
+	switch (key) {
+	case 'w':
+	case 'W':
+		transZ += 0.2f;
+		printf("Posicion en Z: %f\n", transZ);
 		break;
-  }
+	case 's':
+	case 'S':
+		transZ -= 0.2f;
+		printf("Posicion en Z: %f\n", transZ);
+		break;
+	case 'a':
+	case 'A':
+		transX -= 0.2f;
+		break;
+	case 'd':
+	case 'D':
+		transX += 0.2f;
+		break;
+	case 'q':
+	case 'Q':
+		transY += 0.2f;
+		break;
+	case 'e':
+	case 'E':
+		transY -= 0.2f;
+		break;
+	case 27:        // Cuando Esc es presionado...
+		exit(0);   // Salimos del programa
+		break;
+	default:        // Cualquier otra
+		break;
+	}
 	glutPostRedisplay();
 }
 
-void arrow_keys ( int a_keys, int x, int y )  // Funcion para manejo de teclas especiales (arrow keys)
+void arrow_keys(int a_keys, int x, int y)  // Funcion para manejo de teclas especiales (arrow keys)
 {
-  switch ( a_keys ) {
-    case GLUT_KEY_UP:     // Presionamos tecla ARRIBA...
+	switch (a_keys) {
+	case GLUT_KEY_UP:     // Presionamos tecla ARRIBA...
 		angleX += 1.0f;
 		break;
-      //glutFullScreen ( ); // Full Screen Mode
-      //break;
-    case GLUT_KEY_DOWN:               // Presionamos tecla ABAJO...
+		//glutFullScreen ( ); // Full Screen Mode
+		//break;
+	case GLUT_KEY_DOWN:               // Presionamos tecla ABAJO...
 		angleX -= 1.0f;
 		break;
-      //glutReshapeWindow ( 500, 500 ); // Cambiamos tamano de Ventana
-      //break;
+		//glutReshapeWindow ( 500, 500 ); // Cambiamos tamano de Ventana
+		//break;
 	case GLUT_KEY_LEFT:
 		angleY += 1.0f;
 		break;
 	case GLUT_KEY_RIGHT:
 		angleY -= 1.0f;
 		break;
-    default:
-      break;
-  }
-  glutPostRedisplay();
+	default:
+		break;
+	}
+	glutPostRedisplay();
 }
 
 
-int main ( int argc, char** argv )   // Main Function
+int main(int argc, char** argv)   // Main Function
 {
-  glutInit            (&argc, argv); // Inicializamos OpenGL
-  //glutInitDisplayMode (GLUT_RGBA | GLUT_SINGLE | GLUT_DEPTH); // Display Mode (Clores RGB y alpha | Buffer Sencillo )
-  glutInitDisplayMode (GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH); // Display Mode (Clores RGB y alpha | Buffer Doble )
-  glutInitWindowSize  (500, 500);	// Tamaño de la Ventana
-  glutInitWindowPosition (0, 0);	//Posicion de la Ventana
-  glutCreateWindow    ("Practica 3"); // Nombre de la Ventana
-  InitGL ();						// Parametros iniciales de la aplicacion
-  glutDisplayFunc     ( display );  //Indicamos a Glut función de dibujo
-  glutReshapeFunc     ( reshape );	//Indicamos a Glut función en caso de cambio de tamano
-  glutKeyboardFunc    ( keyboard );	//Indicamos a Glut función de manejo de teclado
-  glutSpecialFunc     ( arrow_keys );	//Otras
-  glutMainLoop        ( );          // 
+	glutInit(&argc, argv); // Inicializamos OpenGL
+	//glutInitDisplayMode (GLUT_RGBA | GLUT_SINGLE | GLUT_DEPTH); // Display Mode (Clores RGB y alpha | Buffer Sencillo )
+	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH); // Display Mode (Clores RGB y alpha | Buffer Doble )
+	glutInitWindowSize(500, 500);	// TamaÃ±o de la Ventana
+	glutInitWindowPosition(0, 0);	//Posicion de la Ventana
+	glutCreateWindow("Practica 3"); // Nombre de la Ventana
+	InitGL();						// Parametros iniciales de la aplicacion
+	glutDisplayFunc(display);  //Indicamos a Glut funciÃ³n de dibujo
+	glutReshapeFunc(reshape);	//Indicamos a Glut funciÃ³n en caso de cambio de tamano
+	glutKeyboardFunc(keyboard);	//Indicamos a Glut funciÃ³n de manejo de teclado
+	glutSpecialFunc(arrow_keys);	//Otras
+	glutMainLoop();          // 
 
-  return 0;
+	return 0;
 }
-
-
 
